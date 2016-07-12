@@ -2,6 +2,10 @@
   font-size: inherit;
   color: inherit; }
 
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
+  color: inherit; }
+
 #header {
   color: white;
   background: #603913;
@@ -19,7 +23,7 @@
     color: white;
     box-shadow: none; }
     #header .input-group input:focus, #header .input-group input:hover {
-      border-color: #37a000; }
+      border-color: #5a8f35; }
     #header .input-group input::-moz-placeholder {
       color: white; }
     #header .input-group input::-webkit-input-placeholder {
@@ -28,7 +32,7 @@
       color: white; }
   #header .input-group .input-group-addon {
     cursor: pointer;
-    background: #37a000;
+    background: #5a8f35;
     color: white;
     border: none;
     border-radius: 0px; }
@@ -40,5 +44,23 @@
     text-decoration: none; }
     #header a.random .glyphicon {
       vertical-align: middle; }
+
+#content {
+  background: #c69c6d;
+  color: white; }
+  #content .container {
+    padding: 40px 0px 25px 0px; }
+    #content .container .entry {
+      background: #8c6239;
+      margin: 0px 0px 15px; }
+      #content .container .entry:hover {
+        background: #5a8f35; }
+      #content .container .entry a {
+        display: block;
+        padding: 15px; }
+        #content .container .entry a h2, #content .container .entry a p {
+          margin: 0px; }
+        #content .container .entry a p {
+          color: #d2b18e; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,14 +1,22 @@
 //_____________________________ #00 variables _____________________________
 $headerBgColor: #603913;
-$activeElementColor: #37a000;
+$activeElementColor: #5a8f35;
 $inputBgColor: #8c6239;
 $contentBgColor: #c69c6d;
 $textColor: #d2b18e;
-$mainMargin: 70px;
+
+$bigMargin: 70px;
+$normalMargin: $bigMargin - 30px;
+$smallMargin: 15px;
 
 //___________________________ #01 generale rules __________________________
 * {
 	font-size: inherit;
+	color: inherit;
+}
+
+a, a:hover, a:active, a:visited{
+	text-decoration: none;
 	color: inherit;
 }
 
@@ -18,11 +26,11 @@ $mainMargin: 70px;
 	background: $headerBgColor;
 	font-family: verdana, arial, sans-serif;
 	h1 {
-		margin: $mainMargin 0px 0px;
+		margin: $bigMargin 0px 0px;
 	}
 	p {
 		color: $textColor;
-		margin: 0px 0px $mainMargin 0px;
+		margin: 0px 0px $bigMargin 0px;
 	}
 	.input-group {
 		input {
@@ -58,13 +66,40 @@ $mainMargin: 70px;
 	}
 	
 	a.random {
-		margin: $mainMargin - 30px 0px;
+		margin: $normalMargin 0px;
 		color: white;
 		display: block;
 		text-align: center;
 		text-decoration: none;
 		.glyphicon {
 			vertical-align: middle;
+		}
+	}
+}
+
+//___________________________ #03 #content styling _________________________
+#content {
+	background: $contentBgColor;
+	color: white;
+	.container {
+		padding: $normalMargin 0px $normalMargin - $smallMargin 0px;
+		.entry {
+			background: $inputBgColor;
+			margin: 0px 0px $smallMargin;
+			&:hover {
+				background: $activeElementColor;
+			}
+			a {
+				display: block;
+				padding: $smallMargin;
+				h2, p {
+					margin: 0px;
+				}
+				p {
+					color: $textColor;
+				}
+			}
+			
 		}
 	}
 }
