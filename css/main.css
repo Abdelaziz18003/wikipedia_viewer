@@ -1,0 +1,44 @@
+* {
+  font-size: inherit;
+  color: inherit; }
+
+#header {
+  color: white;
+  background: #603913;
+  font-family: verdana, arial, sans-serif; }
+  #header h1 {
+    margin: 70px 0px 0px; }
+  #header p {
+    color: #d2b18e;
+    margin: 0px 0px 70px 0px; }
+  #header .input-group input {
+    background: #8c6239;
+    border: 2px solid #8c6239;
+    border-right: none;
+    border-radius: 0px;
+    color: white;
+    box-shadow: none; }
+    #header .input-group input:focus, #header .input-group input:hover {
+      border-color: #37a000; }
+    #header .input-group input::-moz-placeholder {
+      color: white; }
+    #header .input-group input::-webkit-input-placeholder {
+      color: white; }
+    #header .input-group input:-ms-input-placeholder {
+      color: white; }
+  #header .input-group .input-group-addon {
+    cursor: pointer;
+    background: #37a000;
+    color: white;
+    border: none;
+    border-radius: 0px; }
+  #header a.random {
+    margin: 40px 0px;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none; }
+    #header a.random .glyphicon {
+      vertical-align: middle; }
+
+/*# sourceMappingURL=main.css.map */
