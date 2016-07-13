@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	var searchButton = $('#header .input-group-addon');
 	var searchInput = $('#searchInput');
+	var container = $('#content .container');
 	
 	//ajax call parameters
 	var apiUrl = 'http://en.wikipedia.org/w/api.php';
@@ -15,7 +16,7 @@ $(document).ready(function(){
 	//constructing the html element
 	function handleData(data) {
 		console.log(data);
-		var container = $('#content .container');
+		
 		var title = '';
 		var summary = '';
 		var link = '';
@@ -38,7 +39,7 @@ $(document).ready(function(){
 	
 	//attach a click event to the search button
 	searchButton.on('click', function(){
-
+		container.html('');
 		//get the input field and attach it to the search data
 		apiData.search = searchInput.val();
 
