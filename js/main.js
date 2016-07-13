@@ -13,6 +13,24 @@ $(document).ready(function(){
 		format: 'json'
 	}
 	
+	//handling submit event
+	function handleSubmit(){
+		
+		//clear existing content
+		container.html('');
+		
+		//get the input field and attach it to the search data
+		apiData.search = searchInput.val();
+
+		$.ajax({
+			url: apiUrl,
+			method: 'GET',
+			dataType: 'jsonp',
+			data: apiData,
+			success: handleData
+		})
+	}
+	
 	//constructing the html element
 	function handleData(data) {
 		console.log(data);
@@ -37,19 +55,14 @@ $(document).ready(function(){
 		}
 	}
 	
-	//attach a click event to the search button
+	//handle submit when "enter" key pressed
+	$('form').on('submit', function(event){
+		event.preventDefault();
+		handleSubmit();
+	})
+	
+	//handle submit when search button clicked
 	searchButton.on('click', function(){
-		container.html('');
-		//get the input field and attach it to the search data
-		apiData.search = searchInput.val();
-
-		$.ajax({
-			url: apiUrl,
-			method: 'GET',
-			dataType: 'jsonp',
-			data: apiData,
-			success: handleData
-		})
-		
+		handleSubmit();
 	})
 })
