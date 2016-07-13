@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var searchButton = $('#header .input-group-addon');
 	var searchInput = $('#searchInput');
 	
+	//ajax call parameters
 	var apiUrl = 'http://en.wikipedia.org/w/api.php';
 	var apiData = {
 		action: 'opensearch',
@@ -11,6 +12,29 @@ $(document).ready(function(){
 		format: 'json'
 	}
 	
+	//constructing the html element
+	function handleData(data) {
+		console.log(data);
+		var container = $('#content .container');
+		var title = '';
+		var summary = '';
+		var link = '';
+		var element = '';
+		for(var i = 0; i < data[1].length; i++) {
+			title = data[1][i];
+			summary = data[2][i];
+			link = data[3][i];
+			
+			element = '';
+			element += '<div class="row entry"><a href="' + link + '" target="_blank">';
+			element += '<h2>' + title + '</h2>';
+			element += '<p>' + summary + '</p>';
+			element += '</a></div>';
+			
+			console.log(element);
+			container.append(element);
+		}
+	}
 	
 	//attach a click event to the search button
 	searchButton.on('click', function(){
