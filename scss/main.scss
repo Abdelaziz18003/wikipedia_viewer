@@ -10,6 +10,10 @@ $normalMargin: $bigMargin - 30px;
 $smallMargin: 15px;
 
 //___________________________ #01 generale rules __________________________
+body {
+	background: $contentBgColor;
+}
+
 * {
 	font-size: inherit;
 	color: inherit;
@@ -79,7 +83,6 @@ a, a:hover, a:active, a:visited{
 
 //___________________________ #03 #content styling _________________________
 #content {
-	background: $contentBgColor;
 	color: white;
 	.container {
 		padding: $normalMargin 0px $normalMargin - $smallMargin 0px;

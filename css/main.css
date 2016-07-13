@@ -1,3 +1,6 @@
+body {
+  background: #c69c6d; }
+
 * {
   font-size: inherit;
   color: inherit; }
@@ -46,7 +49,6 @@ a, a:hover, a:active, a:visited {
       vertical-align: middle; }
 
 #content {
-  background: #c69c6d;
   color: white; }
   #content .container {
     padding: 40px 0px 25px 0px; }
