@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var container = $('#content .container');
 	
 	//ajax call parameters
-	var apiUrl = 'http://en.wikipedia.org/w/api.php';
+	var apiUrl = 'https://en.wikipedia.org/w/api.php';
 	var apiData = {
 		action: 'opensearch',
 		limit: 10,
